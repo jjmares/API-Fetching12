@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Got Games?</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+    </div>
+    <div class="games-container">
+        <h1 class="text-center">GAMING</h1>
+        <div class="input-group mb-3">
+          <form id="gameForm">
+            <input
+              type="text"
+              id="newGame"
+              class="form-control"
+              placeholder="Game Name"
+              required
+            />
+            <select class="form-select mb-3" id="review-stars-select">
+                <option selected>Star Ratings</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+            </select>
+          
+              
+                <button onclick="onFetchGamesClick()" class="btn btn-primary">GET GAMES</button>
+          
+                <button class="btn btn-primary" id="addGame" 
+                type="submit" onclick="onCreateGamesClick()">
+                Add
+                </button>
+          </form>
+          <div id="show-games"></div>
+        </div>
+      </div>
+
+
+
+    <script src="index.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+<!-- Create a CRD application (CRUD without update) 
+using json-server or another API
+Use fetch and async/await to interact with the API
+Use a form to create/post new entities
+Build a way for users to delete entities
+Include a way to get entities from the API 
+and display them
+You do NOT need update, 
+but you can add it if you'd like
+Use Bootstrap and/or CSS to style your project -->
