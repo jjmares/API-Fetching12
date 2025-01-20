@@ -1,3 +1,4 @@
+const reviewStarsSelect = document.getElementById("review-stars-select")
 const gamesContainer = document.getElementById("games-container");
 
 let lastCreatedItem = null;
@@ -26,7 +27,7 @@ function showGames(games){
 }
 
 async function onCreateGamesClick() {
-    const testGame = { title: "Test", genreId: 1}
+    const testGame = { title: "Test", stars: 1}
     const response = await fetch("http://localhost:3000/games", {
         method: "POST", //CREATING
         headers: {"Content-Type": "application/json"},
@@ -34,5 +35,16 @@ async function onCreateGamesClick() {
     })
     const newlyCreatedItem = await response.json()
     lastCreatedItem = newlyCreatedItem
+    return data;
+}
+
+async function onDeleteGamesClick() {
+    if(lastCreatedItem === null) {
+        console.log("Nothing yet to delete")
+        return
+    }
+    fetch("http://localhost:3000/games" + lastCreatedItem.id + lastCreatedItem.stars, {
+        method: "DELETE",
+    })
 }
 
