@@ -54,25 +54,16 @@ $(document).on("click", ".delete-btn", function () {
         .catch(error => console.error("Error deleting game:", error));
 });
 
-// Edit a game
-$(document).on("click", ".edit-btn", function () {
-    const id = $(this).data("id");
-    const title = prompt("Enter new title:", $(this).data("title"));
-    const stars = prompt("Enter new stars (1-5):", $(this).data("stars"));
-
-    if (title && stars) {
-        fetch(`${API_URL}/${id}`, {
-            method: "PATCH",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ title, stars: parseInt(stars) }),
-        })
-            .then(() => fetchGames())
-            .catch(error => console.error("Error updating game:", error));
-    }
-});
-
 // Initial fetch of games
 fetchGames();
+
+
+
+
+
+
+
+
 
 
 
