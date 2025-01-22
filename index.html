@@ -3,6 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Got Games</h1>
+        <div class="mt-4">
+            <!-- Create Form -->
+            <form id="create-form" class="d-flex gap-2">
+                <input type="text" id="game-title" class="form-control" placeholder="Enter game title" required>
+                <select class="form-control" id="game-stars">
+                  <option selected>Star Ratings</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+              </select>
+                <button type="submit" class="btn btn-success">Add Game</button>
+            </form>
+        </div>
+        <hr>
+        <!-- Games Table -->
+        <table class="table table-bordered mt-4">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Stars</th>
+                </tr>
+            </thead>
+            <tbody id="games-table">
+                <!-- Display games/data -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Bootstrap & jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
+
+<!-- Create a CRD application (CRUD without update) 
+using json-server or another API
+Use fetch and async/await to interact with the API
+Use a form to create/post new entities
+Build a way for users to delete entities
+Include a way to get entities from the API 
+and display them
+You do NOT need update, 
+but you can add it if you'd like
+Use Bootstrap and/or CSS to style your project -->
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Got Games?</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
@@ -30,15 +98,14 @@
                 <option>6</option>
             </select>
           
-              
-                <button onclick="onFetchGamesClick()" class="btn btn-primary">GET GAMES</button>
-          
                 <button class="btn btn-primary" id="addGame" 
                 type="submit" onclick="onCreateGamesClick()">
                 Add
                 </button>
           </form>
-          <div id="show-games"></div>
+          <tbody id="show-games">
+
+          </tbody>
         </div>
       </div>
       <div>
@@ -55,15 +122,5 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
 </body>
-</html>
+</html> -->
 
-<!-- Create a CRD application (CRUD without update) 
-using json-server or another API
-Use fetch and async/await to interact with the API
-Use a form to create/post new entities
-Build a way for users to delete entities
-Include a way to get entities from the API 
-and display them
-You do NOT need update, 
-but you can add it if you'd like
-Use Bootstrap and/or CSS to style your project -->
